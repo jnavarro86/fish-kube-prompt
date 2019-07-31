@@ -1,6 +1,6 @@
 # fish-kube-prompt
 
-⎈ kubectl context/namespace in your fish shell prompt
+⎈ kubectl context/namespace in your default fish shell prompt
 
 ![preview](preview.png)
 
@@ -9,19 +9,13 @@
 ```fish
 mkdir -p ~/.config/fish/functions/
 cd ~/.config/fish/
-git clone https://github.com/aluxian/fish-kube-prompt
+git clone https://github.com/jnavarro86/fish-kube-prompt.git
 ln -s ../fish-kube-prompt/__kube_prompt.fish functions/
 ln -s ../fish-kube-prompt/kube_ps.fish functions/
+ls -s ../fish-kube-prompt/fish_prompt.fish functions/
 ```
 
-Then create or edit `~/.config/fish/functions/fish_prompt.fish` to include
-`__kube_prompt`:
-
-```fish
-function fish_prompt
-  echo -s (set_color blue) (__kube_prompt) (set_color $fish_color_cwd) " " (prompt_pwd) (set_color normal) "> "
-end
-```
+You can modify the prompt in `~/.config/fish/functions/fish_prompt.fish`
 
 ## Speed
 
@@ -56,7 +50,7 @@ Inspired from the awesome work of:
 * https://github.com/jonmosco/kube-ps1
 * https://github.com/Ladicle/fish-kubectl-prompt
 
-## Author
+## Original Author
 
 Alexandru Rosianu (https://github.com/aluxian/dotfiles-fish)
 
